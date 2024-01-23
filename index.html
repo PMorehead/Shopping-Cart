@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="Patrick Morehead">
+    <title>Shopping Cart</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="js/application.js"></script>
@@ -25,10 +26,85 @@
                 <th scope="col">Item</th>
                 <th scope="col">Price</th>
                 <th scope="col">Quantity</th>
-                <th scope="col">Total</th>
+                <th scope="col"></th>
+                <th scope="col">Subtotal</th>
               </tr>
             </thead>
+            <tbody>
+              <tr>
+                <td class="item">Salmon</td>
+                <td class="price">$60.00</td>
+                <td class="quantity"><input type="number" placeholder="0"></td>
+                <td><button class="btn btn-light btn-sm remove">Remove</button></td>
+                <td class="total">$--.--</td>
+              </tr>
+              <tr>
+                <td class="item">Tuna</td>
+                <td class="price">$50.00</td>
+                <td class="quantity"><input type="number" placeholder="0"></td>
+                <td><button class="btn btn-light btn-sm remove">Remove</button></td>
+                <td class="total">$--.--</td>
+              </tr>
+              <tr>
+                <td class="item">Carp</td>
+                <td class="price">$40.00</td>
+                <td class="quantity"><input type="number" placeholder="0"></td>
+                <td><button class="btn btn-light btn-sm remove">Remove</button></td>
+                <td class="total">$--.--</td>
+              </tr>
+              <tr>
+                <td class="item">Pork</td>
+                <td class="price">$50.00</td>
+                <td class="quantity"><input type="number" placeholder="0"></td>
+                <td><button class="btn btn-light btn-sm remove">Remove</button></td>
+                <td class="total">$--.--</td>
+              </tr>
+              <tr>
+                <td class="item">Beef</td>
+                <td class="price">$40.00</td>
+                <td class="quantity"><input type="number" placeholder="0"></td>
+                <td><button class="btn btn-light btn-sm remove">Remove</button></td>
+                <td class="total">$--.--</td>
+              </tr>
+              <tr>
+                <td class="item">Chicken</td>
+                <td class="price">$25.00</td>
+                <td class="quantity"><input type="number" placeholder="0"></td>
+                <td><button class="btn btn-light btn-sm remove">Remove</button></td>
+                <td class="total">$--.--</td>
+              </tr>
+              <tr>
+                <td class="item">Cereal</td>
+                <td class="price">$45.00</td>
+                <td class="quantity"><input type="number" placeholder="0"></td>
+                <td><button class="btn btn-light btn-sm remove">Remove</button></td>
+                <td class="total">$--.--</td>
+              </tr>
+              <tr>
+                <td class="item">Milk</td>
+                <td class="price">$20.00</td>
+                <td class="quantity"><input type="number" placeholder="0"></td>
+                <td><button class="btn btn-light btn-sm remove">Remove</button></td>
+                <td class="total">$--.--</td>
+              </tr>
+              <tr>
+                <td class="item">Sugar</td>
+                <td class="price">$10.00</td>
+                <td class="quantity"><input type="number" placeholder="0"></td>
+                <td><button class="btn btn-light btn-sm remove">Remove</button></td>
+                <td class="total">$--.--</td>
+              </tr>
+            </tbody>
           </table>
+        </div>
+        <form class="col-12 mt-2 mb-4" id="addItem">
+          <input class="mx-2" name="item" type="text" placeholder="Item" required />
+          <input class="mx-2" name="price" type="number" placeholder="Price" required />
+          <input class="mx-2" name="quantity" type="number" placeholder="Quantity" required />
+          <button class="btn btn-primary btn-small">Add Item</button>
+        </form>
+        <div class="col-6">
+          <h1>Cart Total: $--.--</h1>
         </div>
       </div>
     </div>
