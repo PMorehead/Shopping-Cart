@@ -1,13 +1,16 @@
 var calcSubtotal = function (ele) {
-    var quantity = parseInt($(ele).children('.quantity').text());
+    var quantity = parseInt($(ele).find('.quantity input').val());
     var price = parseFloat($(ele).children('.price').text().replace("$", ""));
     var subtotal = quantity * price;
 
-    $(ele).children('.subtotal').html("$" + subtotal);
+    if (subtotal > 0) {
+        $(ele).children('.subtotal').html("$" + subtotal);
+    };
+    
     return subtotal;
 }
 
-var sum = function (acc, x) {return acc + x};
+var sum = function (acc, x) { return acc + x; };
 
 var updateCartTotal = function () {
     var cartSubtotals = [];
@@ -17,9 +20,21 @@ var updateCartTotal = function () {
     });
 
     var cartTotal = cartSubtotals.reduce(sum);
-    $('#total').html("$" + cartTotal);
+    if (cartTotal > 0) {
+        $('#total').html("Cart Total: $" + cartTotal);
+    };
+    
 }
 
 $(document).ready(function () {
     updateCartTotal();
+
+    $('.btn.remove').on('click', function (event) {
+        $(this).closest('tr').remove();
+        updateCartTotal();
+    });
+
+    $('tr input').on('input', function() {
+        updateCartTotal();
+    })
 });
