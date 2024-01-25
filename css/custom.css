@@ -1,0 +1,12 @@
+thead {
+    background-color: lightgray;
+}
+
+h1 {
+    font-family:'Times New Roman', Times, serif;
+}
+
+
+.remove:hover {
+    background-color: lightgray;
+}
