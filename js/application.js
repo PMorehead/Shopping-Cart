@@ -4,7 +4,7 @@ var calcSubtotal = function (ele) {
     var subtotal = quantity * price;
 
     if (subtotal > 0) {
-        $(ele).children('.subtotal').html("$" + subtotal);
+        $(ele).children('.subtotal').html("$" + subtotal.toFixed(2));
     };
     
     return subtotal;
@@ -21,7 +21,7 @@ var updateCartTotal = function () {
 
     var cartTotal = cartSubtotals.reduce(sum);
     if (cartTotal > 0) {
-        $('#total').html("Cart Total: $" + cartTotal);
+        $('#total').html("Cart Total: $" + cartTotal.toFixed(2));
     };
     
 }
